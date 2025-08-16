@@ -1,1 +1,50 @@
 @import 'style.css';
+
+.main {
+}
+.main__hero {
+}
+.hero {
+  padding-block: 7.5rem; /* 120/16 */
+  background: radial-gradient(circle at 25% 25%, hsl(235 85% 60% / 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, hsl(270 85% 60% / 0.1) 0%, transparent 50%), hsl(217 100% 8%);
+}
+.hero__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem; /* 48/16 */
+  row-gap: 1.5rem; /* 24/16 */
+}
+.hero__content {
+}
+.hero__title {
+  font-size: 4rem; /* 64/16 */
+  font-weight: 700;
+  line-height: 1.25;
+}
+.hero__text {
+}
+.hero__btns {
+}
+.hero__btn {
+}
+.btn {
+}
+.btn--bg-blue {
+}
+.btn--border {
+}
+.hero__picture {
+}
+.hero__performance-block {
+}
+.performance-block {
+}
+.performance-block__number {
+}
+.performance-block__body {
+}
+.performance-block__title {
+}
+.performance-block__text {
+}

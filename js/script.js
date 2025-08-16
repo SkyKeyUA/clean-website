@@ -17,3 +17,23 @@ function documentActions(e) {
     ? html.classList.remove('menu-open')
     : null;
 }
+if (600 >= window.innerWidth) {
+  const sendBtnsToMenu = () => {
+    const menu = document.querySelector('.header__menu');
+    const menuList = document.querySelector('.header__menu ul');
+    const tel = document.querySelector('.actions__tel');
+    const btn = document.querySelector('.actions__btn');
+    if (menuList && tel) {
+      const newLi = document.createElement('li');
+      newLi.appendChild(tel);
+      menuList.appendChild(newLi);
+    }
+    if (menu && btn) {
+      const newDiv = document.createElement('div');
+      newDiv.style.textAlign = 'end';
+      newDiv.appendChild(btn);
+      menu.appendChild(newDiv);
+    }
+  };
+  sendBtnsToMenu();
+}

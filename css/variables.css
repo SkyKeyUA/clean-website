@@ -1,26 +1,14 @@
 :root {
   /* fonts */
-  --main-font-family: 'Playfair', serif;
-  --second-font-family: 'Clicker Script', serif;
+  --main-font-family: 'Plus Jakarta Sans', sans-serif;
+  --logo-font-family: 'DM Serif Text', serif;
 
   /* colors */
-  --primary-title: #603809;
-  --primary-text: #707070;
-  --pramary-bg: #fffefc;
+  --primary-title: #ffffff;
+  --primary-text: #94a3b8;
+  --pramary-bg: #0b1220;
 
-  --header-text: #ffffff;
-  --header-bg: #3d3d3d;
-
-  --button-text: #1e1e1e;
-  --button-bg: #f9c06a;
-  --button-box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
-
-  --card-bg: #fff9f1;
-  --active-card-bg: #ffeed8;
-  --card-border: rgba(249, 192, 106, 0.42);
-
-  --hero-img-bg: linear-gradient(90deg, #1e1e1e -6.88%, rgba(0, 0, 0, 0) 87.45%);
-  --img-bg: #603809;
+  --link-bg: #4251f0;
 
   --hover-icon: brightness(0) invert(28%) sepia(78%) saturate(3802%) hue-rotate(236deg)
     brightness(98%) contrast(97%);

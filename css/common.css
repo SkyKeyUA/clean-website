@@ -10,7 +10,89 @@
   block-size: 100%;
   object-fit: contain;
 }
+.title {
+  color: var(--primary-title);
+}
+.btn {
+  font-weight: 600;
+}
+.btn--bg-blue {
+  color: var(--primary-title);
+  background-color: var(--link-bg);
+  box-shadow: 0 4px 20px var(--link-bg);
+}
+.btn--header {
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  border-radius: 1.25rem; /* 20/16 */
+}
+.actions {
+  font-size: 0.875rem; /* 14/16 */
+}
+.logo__icon {
+  inline-size: 2.4375rem; /* 39/16 */
+  flex-basis: 2.4375rem; /* 39/16 */
+  flex-shrink: 0;
+  aspect-ratio: 39 / 30;
+  opacity: 0;
+  animation: opacity-default 1s linear forwards;
+  animation-delay: 3.2s;
+}
+.logo__text span {
+  display: inline-block;
+  transform: scale(2);
+  opacity: 0;
+  letter-spacing: 0.6px;
+  animation: scale-default 0.5s linear forwards, opacity-default 0.5s linear forwards;
+}
+.logo__text span:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.logo__text span:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.logo__text span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.logo__text span:nth-child(4) {
+  animation-delay: 1s;
+}
+.logo__text span:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.logo__text span:nth-child(6) {
+  animation-delay: 1.4s;
+}
+.logo__text span:nth-child(7) {
+  animation-delay: 1.6s;
+}
+.logo__text span:nth-child(8) {
+  animation-delay: 1.8s;
+}
+.logo__text span:nth-child(9) {
+  animation-delay: 2s;
+}
+.logo__text span:nth-child(10) {
+  animation-delay: 2.2s;
+}
+.logo__text span:nth-child(11) {
+  animation-delay: 2.4s;
+}
+.logo__text span:nth-child(12) {
+  animation-delay: 2.6s;
+}
 @media (any-hover: hover) {
+  .btn--bg-blue {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn--bg-blue:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 8px 32px var(--link-bg);
+  }
+  .btn--bg-blue:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 20px var(--link-bg);
+  }
   [class*='--img-hover'] img {
     transition: filter 0.3s ease;
   }
@@ -20,5 +102,11 @@
   }
   [class*='--img-hover']:active img {
     filter: none;
+  }
+}
+@media (max-width: 600px) {
+  .btn--header {
+    font-size: 1.5rem; /* 24/16 */
+    border-radius: 0.75rem;
   }
 }
