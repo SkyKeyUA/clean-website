@@ -1,12 +1,19 @@
 .header {
+  padding-block: 1.5rem; /* 24/16 */
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
   inline-size: 100%;
   z-index: 50;
+  transition: all 0.3s;
+  border-block-end: 0.0625rem solid transparent;
+}
+.header--scroll {
+  backdrop-filter: blur(1.25rem);
+  border-block-end: 0.0625rem solid var(--header-bottom-border);
+  padding-block: 1rem; /* 16/16 */
 }
 .header__container {
-  padding-block: 1.5rem; /* 24/16 */
   display: grid;
   column-gap: 1rem; /* 16/16 */
   grid-template-columns: 1fr auto 1fr;
@@ -25,6 +32,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.5rem; /* 8/16 */
+  white-space: nowrap;
 }
 .header__menu ul {
   display: flex;
@@ -123,14 +131,14 @@
     transition: left 0.3s ease;
   }
   .menu {
-    block-size: 100%;
+    block-size: 100vh;
     padding-block: 7.5rem 2.5rem;
     padding-inline: 0.9375rem; /* 15/16 */
     overflow-y: auto;
   }
   .menu::after {
     content: '';
-    block-size: 5.375rem; /* 86/16 */
+    block-size: 4.875rem; /* 78/16 */
   }
   .menu-open .menu,
   .menu-open .menu::after {

@@ -1,4 +1,5 @@
 window.addEventListener('load', windowLoad);
+const header = document.querySelector('.header');
 const html = document.documentElement;
 
 function windowLoad() {
@@ -6,6 +7,7 @@ function windowLoad() {
     document.addEventListener('click', documentActions);
   }
   html.classList.add('loaded');
+  scrollActions();
 }
 function documentActions(e) {
   const targetElement = e.target;
@@ -36,4 +38,12 @@ if (600 >= window.innerWidth) {
     }
   };
   sendBtnsToMenu();
+}
+function scrollActions() {
+  window.addEventListener('scroll', scrollAction);
+
+  function scrollAction() {
+    header?.classList.toggle('header--scroll', scrollY > header.offsetHeight);
+  }
+  scrollAction();
 }

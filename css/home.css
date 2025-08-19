@@ -1,12 +1,7 @@
 @import 'style.css';
 
-.main {
-}
-.main__hero {
-}
 .hero {
   position: relative;
-  padding-block: 7.5rem; /* 120/16 */
   background: radial-gradient(circle at 25% 25%, hsl(235 85% 60% / 0.15) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, hsl(270 85% 60% / 0.1) 0%, transparent 50%), hsl(217 100% 8%);
 }
@@ -16,12 +11,6 @@
   inset: 0;
   background: url('../img/hero-gradient.svg') 0 0 / 9.375rem repeat;
   pointer-events: none;
-}
-.hero__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem; /* 48/16 */
-  row-gap: 1.5rem; /* 24/16 */
 }
 .hero__content {
   display: flex;
@@ -46,6 +35,7 @@
   align-items: center;
 }
 .hero__picture {
+  inline-size: fit-content;
   align-self: center;
   position: relative;
   background: var(--hero-picture-bg);
@@ -98,5 +88,31 @@
 @media (min-width: 767.98px) {
   .hero__title {
     font-size: clamp(2rem, 7.407vw - 1.556rem, 4rem); /* 32>64 768>1200 */
+  }
+  .hero {
+    padding-block: 5.625rem; /* 90/16 */
+  }
+}
+@media (min-width: 991.98px) {
+  .hero {
+    padding-block: 7.5rem; /* 120/16 */
+  }
+  .hero__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem; /* 48/16 */
+  }
+}
+@media (max-width: 991.98px) {
+  .hero__content {
+    margin-block-end: 3rem; /* 48/16 */
+  }
+  .hero__picture {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    padding-block: 5.625rem 1.875rem; /* 30/16 */
   }
 }
