@@ -43,7 +43,7 @@ function scrollActions() {
   window.addEventListener('scroll', scrollAction);
 
   function scrollAction() {
-    header?.classList.toggle('header--scroll', scrollY > header.offsetHeight);
+    header?.classList.toggle('header--scroll', scrollY > header.offsetHeight / 2);
   }
   scrollAction();
 }
