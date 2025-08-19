@@ -1,6 +1,7 @@
 :root {
   /* fonts */
   --main-font-family: 'Plus Jakarta Sans', sans-serif;
+  --second-font-family: 'Inter', sans-serif;
   --logo-font-family: 'DM Serif Text', serif;
 
   /* colors */
@@ -8,7 +9,15 @@
   --primary-text: #94a3b8;
   --pramary-bg: #0b1220;
 
+  --hero-picture-bg: #031430;
+
   --link-bg: #4251f0;
+
+  --btn-box-shadow: 0 4px 20px #4251f066;
+
+  --performance-bg: #03183acc;
+  --performance-border: #ffffff1a;
+  --performance-number-bg: #22c55e;
 
   --hover-icon: brightness(0) invert(28%) sepia(78%) saturate(3802%) hue-rotate(236deg)
     brightness(98%) contrast(97%);
