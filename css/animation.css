@@ -30,3 +30,8 @@
     transform: translateY(4px) rotate(-1deg);
   }
 }
+@keyframes rotate-gradient {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -117,12 +117,72 @@
 .service {
   background-color: var(--service-bg);
 }
+.cards-process {
+  counter-reset: process-list;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem; /* 32/16 */
+}
+.cards-process article {
+  display: flex;
+  column-gap: 2rem; /* 32/16 */
+  row-gap: 1.5rem; /* 24/16 */
+  align-items: center;
+  position: relative;
+}
+.cards-process article::before {
+  counter-increment: process-list;
+  content: '0' counter(process-list);
+  inline-size: 5rem; /* 80/16 */
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 5rem; /* 80/16 */
+  flex-shrink: 0;
+  font-size: 1.5rem; /* 24/16 */
+  font-weight: 700;
+  line-height: 2rem;
+  color: var(--link-bg);
+  background: var(--hero-picture-bg);
+  border-radius: 1rem;
+  border: 0.0625rem solid var(--service-card-border);
+  align-self: flex-start;
+}
+.cards-process article::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset-inline-start: -1px;
+  inset-block-start: -1px;
+  border-radius: 1rem;
+  inline-size: 5.125rem; /* 82/16 */
+  flex-basis: 5.125rem; /* 82/16 */
+  flex-shrink: 0;
+  aspect-ratio: 1;
+  background: linear-gradient(145deg, var(--link-bg), var(--process-number-gradient));
+}
+.cards-process__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-block-end: 0.75rem; /* 12/16 */
+}
+.cards-process__text {
+  font-size: 1.125rem;
+  line-height: 1.625;
+  font-weight: 500;
+}
+.cards-process__text p:not(:last-child) {
+  margin-block-end: 0.5rem; /* 8/16 */
+}
 @media (min-width: 767.98px) {
   .hero {
     padding-block: 5.625rem; /* 90/16 */
   }
   .trusted,
-  .service {
+  .service,
+  .process {
     padding-block: 2.5rem; /* 40/16 */
   }
   .hero__title {
@@ -130,6 +190,9 @@
   }
   .service__section-header {
     margin-block-end: 3rem; /* 48/16 */
+  }
+  .process__section-header {
+    margin-block-end: 4rem; /* 64/16 */
   }
 }
 @media (min-width: 991.98px) {
@@ -139,7 +202,8 @@
   .trusted {
     padding-block: 4rem; /* 64/16 */
   }
-  .service {
+  .service,
+  .process {
     padding-block: 6rem; /* 96/16 */
   }
   .hero__container {
@@ -161,15 +225,20 @@
     padding-block: 5.625rem 1.875rem; /* 30/16 */
   }
   .trusted,
-  .service {
+  .service,
+  .process {
     padding-block: 1.875rem; /* 30/16 */
   }
-  .service__section-header {
+  .service__section-header,
+  .process__section-header {
     margin-block-end: 2rem; /* 32/16 */
   }
 }
 @media (max-width: 479.98px) {
   .trusted__title {
     margin-block-end: 1rem; /* 16/16 */
+  }
+  .cards-process article {
+    flex-direction: column;
   }
 }
