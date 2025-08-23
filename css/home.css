@@ -117,6 +117,41 @@
 .service {
   background-color: var(--service-bg);
 }
+.cards-service ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18.125rem, 100%), 1fr));
+  gap: 2rem; /* 32/16 */
+}
+.cards-service article {
+  padding: 2rem; /* 32/16 */
+  border: 0.0625rem solid var(--service-card-border);
+  border-radius: 1.25rem; /* 20/16 */
+  background: var(--service-card-bg);
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+}
+.cards-service__icon {
+  inline-size: 3rem; /* 48/16 */
+  aspect-ratio: 1;
+  padding: 0.6875rem; /* 12/16 */
+  border-radius: 1rem; /* 16/16 */
+  border: 0.0625rem solid var(--service-card-icon-border);
+  background-color: var(--service-card-icon-bg);
+  margin-block-end: 1.5rem; /* 24/16 */
+}
+.cards-service__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.cards-service__text {
+  line-height: 1.625;
+}
+.cards-service__text p:not(:last-child) {
+  margin-block-end: 1rem; /* 16/16 */
+}
 .cards-process {
   counter-reset: process-list;
   display: flex;
@@ -176,19 +211,110 @@
 .cards-process__text p:not(:last-child) {
   margin-block-end: 0.5rem; /* 8/16 */
 }
+.projects {
+  border-block: 0.0625rem solid var(--service-card-border);
+}
+.cards-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(22.5rem, 100%), 23rem));
+  justify-content: center;
+  gap: 2rem; /* 32/16 */
+}
+.cards-projects a {
+  block-size: 100%;
+}
+.cards-projects article {
+  max-inline-size: 23rem; /* 360/16 */
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+  background: var(--service-card-bg);
+  border: 1px solid var(--header-bottom-border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.cards-projects__image {
+  max-inline-size: 22.875rem; /* 360/16 */
+  aspect-ratio: 768 / 512;
+  background: radial-gradient(55% 45% at 50% 45%, rgba(255, 255, 255, 0.1) 0, transparent 60%),
+    radial-gradient(120% 80% at 50% 60%, rgba(0, 0, 0, 0.75) 55%, transparent 70%),
+    linear-gradient(180deg, #101d2f, #0a1422);
+  margin-block-end: 1.5rem; /* 24/16 */
+}
+.cards-projects__body {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.5rem; /* 24/16 */
+  margin-block-end: 1.5rem; /* 24/16 */
+  flex-grow: 1;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* 8/16 */
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--link-bg);
+  margin-block-end: 0.75rem; /* 12/16 */
+}
+.tags li {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  background-color: var(--service-card-icon-bg);
+  border: 0.0625rem solid var(--service-card-icon-border);
+  border-radius: 1rem;
+}
+.cards-projects__title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-block-end: 0.5rem; /* 8/16 */
+  text-transform: capitalize;
+}
+.cards-projects__text {
+  line-height: 1.625;
+  margin-block-end: 1rem; /* 16/16 */
+  flex-grow: 1;
+}
+.cards-projects__text p:not(:last-child) {
+  margin-block-end: 0.5rem; /* 8/16 */
+}
+.cards-projects__link {
+  font-size: 0.875rem; /* 14/16 */
+  font-weight: 600;
+  color: var(--link-bg);
+}
+@media (any-hover: hover) {
+  .cards-service article,
+  .cards-projects article {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .cards-service article:hover,
+  .cards-projects article:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 20px 40px var(--service-card-box-shadow);
+  }
+  .cards-projects article:active {
+    transform: translateY(0);
+    box-shadow: inherit;
+  }
+}
 @media (min-width: 767.98px) {
   .hero {
     padding-block: 5.625rem; /* 90/16 */
   }
   .trusted,
   .service,
-  .process {
+  .process,
+  .projects {
     padding-block: 2.5rem; /* 40/16 */
   }
   .hero__title {
     font-size: clamp(2rem, 7.407vw - 1.556rem, 4rem); /* 32>64 768>1200 */
   }
-  .service__section-header {
+  .service__section-header,
+  .projects__section-header {
     margin-block-end: 3rem; /* 48/16 */
   }
   .process__section-header {
@@ -203,7 +329,8 @@
     padding-block: 4rem; /* 64/16 */
   }
   .service,
-  .process {
+  .process,
+  .projects {
     padding-block: 6rem; /* 96/16 */
   }
   .hero__container {
@@ -226,11 +353,13 @@
   }
   .trusted,
   .service,
-  .process {
+  .process,
+  .projects {
     padding-block: 1.875rem; /* 30/16 */
   }
   .service__section-header,
-  .process__section-header {
+  .process__section-header,
+  .projects__section-header {
     margin-block-end: 2rem; /* 32/16 */
   }
 }
