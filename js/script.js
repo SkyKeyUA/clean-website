@@ -47,3 +47,26 @@ function scrollActions() {
   }
   scrollAction();
 }
+var swiper = new Swiper('.swiper-testimonials', {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  slidesPerGroup: 1,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    670: {
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+    992: {
+      slidesPerView: 3,
+      centeredSlides: true,
+    },
+  },
+});

@@ -214,6 +214,9 @@
 .projects {
   border-block: 0.0625rem solid var(--service-card-border);
 }
+.projects__btns {
+  text-align: center;
+}
 .cards-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(22.5rem, 100%), 23rem));
@@ -223,6 +226,7 @@
 .cards-projects a {
   block-size: 100%;
 }
+
 .cards-projects article {
   max-inline-size: 23rem; /* 360/16 */
   display: flex;
@@ -285,6 +289,30 @@
   font-weight: 600;
   color: var(--link-bg);
 }
+.swiper-testimonials li {
+  padding: 1.5rem;
+  background-color: var(--hero-picture-bg);
+  border-radius: 1.25rem;
+  border: 0.0625rem solid var(--header-bottom-border);
+  display: flex;
+  flex-direction: column;
+  block-size: auto;
+}
+.swiper-testimonials__feedback {
+  flex-grow: 1;
+  line-height: 1.625;
+  color: var(--primary-title);
+  margin-block-end: 1rem; /* 16/16 */
+}
+.swiper-testimonials__name {
+  line-height: 1.5;
+  color: var(--primary-title);
+  font-weight: 600;
+}
+.swiper-testimonials__position {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 @media (any-hover: hover) {
   .cards-service article,
   .cards-projects article {
@@ -307,14 +335,17 @@
   .trusted,
   .service,
   .process,
-  .projects {
+  .projects,
+  .testimonials {
     padding-block: 2.5rem; /* 40/16 */
   }
   .hero__title {
     font-size: clamp(2rem, 7.407vw - 1.556rem, 4rem); /* 32>64 768>1200 */
   }
   .service__section-header,
-  .projects__section-header {
+  .projects__section-header,
+  .projects__cards,
+  .testimonials__section-header {
     margin-block-end: 3rem; /* 48/16 */
   }
   .process__section-header {
@@ -330,7 +361,8 @@
   }
   .service,
   .process,
-  .projects {
+  .projects,
+  .testimonials {
     padding-block: 6rem; /* 96/16 */
   }
   .hero__container {
@@ -354,12 +386,15 @@
   .trusted,
   .service,
   .process,
-  .projects {
+  .projects,
+  .testimonials {
     padding-block: 1.875rem; /* 30/16 */
   }
   .service__section-header,
   .process__section-header,
-  .projects__section-header {
+  .projects__section-header,
+  .projects__cards,
+  .testimonials__section-header {
     margin-block-end: 2rem; /* 32/16 */
   }
 }
