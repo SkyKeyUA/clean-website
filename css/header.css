@@ -23,7 +23,7 @@
   font-family: var(--logo-font-family);
   color: var(--primary-title);
   font-size: 1.75rem; /* 28/16 */
-  width: fit-content;
+  inline-size: fit-content;
   position: relative;
   z-index: 5;
 }
